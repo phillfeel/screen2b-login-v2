@@ -83,7 +83,7 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 4000);
 }
 
 // --- CHANGE LANGUAGE --- //
@@ -94,15 +94,19 @@ var dictEnglish = {
     id3: "sign in",
     id4: "All right is reserved",
     id5: "Terms and Conditions", 
-    id6: "Login and password must be more than 3 characters"
+    id6: "Login and password must be more than 3 characters",
+    id7: "Cloud-based digital surface management platform",
+    id8: "The most affordable Digital Signage solution for media screens",
 };
-var dictRussian = {
+var dictРусский = {
     id1: "Логин",
     id2: "Пароль",
     id3: "Войти",
     id4: "Все права защищены",
     id5: "Договор оферты",
-    id6: "Логин и пароль должны быть больше 3 символов"
+    id6: "Логин и пароль должны быть больше 3 символов",
+    id7:"Облачная платформа для управления цифровыми поверхностями",
+    id8:"Самое доступное решение в области Digital Signage для экранов"
 };
 
 var dictEspaña = {
@@ -111,7 +115,9 @@ var dictEspaña = {
     id3: "registrarse",
     id4: "Todos los derechos estan reservados",
     id5: "Términos y Condiciones", 
-    id6: "El inicio de sesión y la contraseña deben tener más de 3 caracteres"
+    id6: "El inicio de sesión y la contraseña deben tener más de 3 caracteres",
+    id7: "Plataforma de gestión de superficie digital basada en la nube",
+    id8: "La solución de señalización digital más asequible para pantallas",
 };
 
 var dict中文 = {
@@ -120,7 +126,20 @@ var dict中文 = {
     id3: "登入",
     id4: "保留所有權利",
     id5: "條款和條件", 
-    id6: "登錄名和密碼必須超過3個字符"
+    id6: "登錄名和密碼必須超過3個字符",
+    id7: "基於雲的數字表面管理平台",
+    id8: "最實惠的屏幕數字標牌解決方案",
+};
+
+var dictFrance = {
+    id1: "S'identifier",
+    id2: "Mot de passe",
+    id3: "Entrer",
+    id4: "Tous les droits sont réservés",
+    id5: "Offre de contrat",
+    id6: "Le nom d'utilisateur et le mot de passe doivent comporter plus de 3 caractères",
+    id7:"Plateforme de gestion de surface numérique basée sur le cloud",
+    id8:"La solution d'affichage numérique la plus abordable pour les écrans"
 };
 
 function changeLanguage(language) {
@@ -271,9 +290,9 @@ function Dropdown(o)
 var dd = new Dropdown(
 {
 	id: 'dd1',
-	val: 'Russian',
+	val: 'Русский',
 	// step2 show items
-	data: ['Russian', 'English', 'España', '中文', 'France'],
+	data: ['Русский', 'English', 'España', '中文', 'France'],
 	cb: function (newval)
 	{
 		//alert(newval);
