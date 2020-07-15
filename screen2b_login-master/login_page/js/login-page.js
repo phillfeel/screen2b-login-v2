@@ -77,6 +77,8 @@ function showSlides() {
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        slides[i].childNodes[1].classList.remove("active");
+ 
         
     }
     slideIndex++;
@@ -84,9 +86,11 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
+    console.log(slides[slideIndex - 1].childNodes[1]);
+    slides[slideIndex - 1].childNodes[1].classList.add("active");
 
-    
-    setTimeout(showSlides, 4000);
+
+    setTimeout(showSlides, 5000);
 }
 
 
