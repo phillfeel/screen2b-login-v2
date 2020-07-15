@@ -85,11 +85,9 @@ function showSlides() {
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
+    slides[slideIndex - 1].childNodes[1].classList.add("active");
     slides[slideIndex - 1].style.display = "block";
     console.log(slides[slideIndex - 1].childNodes[1]);
-    slides[slideIndex - 1].childNodes[1].classList.add("active");
-
-
     setTimeout(showSlides, 5000);
 }
 
